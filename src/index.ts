@@ -1,23 +1,9 @@
-class Sorter {
-  constructor(public collection: number[] | string) {}
+import { CharactersCollection } from "./CharactersCollection";
+import { NumbersCollection } from "./NumbersCollection";
+import { Sorter } from "./Sorter";
 
-  sort(): void {
-    const { length } = this.collection;
-
-    for (let i = 0; i < length; i++) {
-      for (let j = 0; j < length - i - 1; j++) {
-        if (this.collection instanceof Array) {
-          if (this.collection[j] > this.collection[j + 1]) {
-            const leftHand = this.collection[j];
-            this.collection[j] = this.collection[j + 1];
-            this.collection[j + 1] = leftHand;
-          }
-        }
-      }
-    }
-  }
-}
-
-const sorter = new Sorter([0, 123, 35, 4, 41, -1]);
-
+const charactersCollection = new CharactersCollection("Zgdfha");
+const sorter = new Sorter(charactersCollection);
+console.log(charactersCollection.data);
 sorter.sort();
+console.log(charactersCollection.data);
