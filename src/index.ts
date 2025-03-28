@@ -1,19 +1,23 @@
-// import { CharactersCollection } from "./CharactersCollection";
-// import { NumbersCollection } from "./NumbersCollection";
-import { Sorter } from "./Sorter";
-
+import { CharactersCollection } from "./CharactersCollection";
 import { LinkedList } from "./LinkedList";
+import { NumbersCollection } from "./NumbersCollection";
 
-// const charactersCollection = new CharactersCollection("Zgdfha");
-// console.log(charactersCollection.data);
-// sorter.sort();
-// console.log(charactersCollection.data);
-const list = new LinkedList();
-list.add(50);
-list.add(10);
-list.add(60);
-const sorter = new Sorter(list);
+// let characters = new CharactersCollection("salam");
+// characters.sort();
 
-// sorter.sort();
+// console.log(characters);
 
-list.print();
+// let numbers = new NumbersCollection([12, 45, 1, 234, -12]);
+// numbers.sort();
+
+// console.log(numbers);
+
+let list = new LinkedList();
+
+list.add(19);
+list.add(-2);
+list.add(12);
+
+list.sort();
+
+console.log(list.print());
